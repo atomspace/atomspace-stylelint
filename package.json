@@ -10,6 +10,7 @@
     "url": "https://github.com/atomspace/atomspace-stylelint.git"
   },
   "scripts": {
+    "preversion": "npm test",
     "pretest": "neutrino lint"
   },
   "dependencies": {
