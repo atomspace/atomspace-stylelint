@@ -3,7 +3,7 @@ let path = require('path');
 let deepmerge = require('deepmerge');
 
 let stylelintMiddleware = require('./middlewares/middleware-stylelint');
-let stylelintConfig = require('./stylelint.config');
+let stylelintConfig = require('./stylelint.config.json');
 
 module.exports = function (neutrino, settings = {}) {
 	const NODE_MODULES = path.resolve(__dirname, 'node_modules');
