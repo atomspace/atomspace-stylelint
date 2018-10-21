@@ -4,10 +4,10 @@
 		"indentation": "tab",
 		"string-quotes": "single",
 		"no-duplicate-selectors": true,
-		"selector-no-qualifying-type": true,
+		"selector-no-qualifying-type": [true, {"ignore": ["attribute"]}],
 		"selector-max-id": 0,
 		"selector-max-universal": 0,
-		"selector-attribute-quotes": "always",
+		"selector-attribute-quotes": null,
 		"selector-no-vendor-prefix": true,
 		"selector-pseudo-class-blacklist": [
 			"not",
@@ -15,6 +15,15 @@
 		],
 		"selector-class-pattern": "^[a-z\\-]+$",
 		"selector-max-compound-selectors": 7,
+		"selector-type-no-unknown": [true, {"ignore": ["custom-elements"]}],
+		"selector-type-case": "lower",
+		"selector-list-comma-newline-after": "always",
+		"selector-list-comma-newline-before": "never-multi-line",
+		"selector-list-comma-space-before": "never",
+		"selector-pseudo-class-no-unknown": true,
+		"selector-pseudo-element-no-unknown": true,
+		"selector-max-pseudo-class": 2,
+		"keyframes-name-pattern": "^[a-z\\-]+$",
 		"declaration-no-important": true,
 		"declaration-block-no-redundant-longhand-properties": null,
 		"property-no-vendor-prefix": [null, {"ignoreProperties": []}],
@@ -26,12 +35,15 @@
 			"/^data/"
 		],
 		"font-family-name-quotes": "always-where-recommended",
+		"font-family-no-missing-generic-family-keyword": true,
 		"comment-whitespace-inside": "always",
 		"comment-empty-line-before": null,
 		"at-rule-no-vendor-prefix": true,
 		"media-feature-name-no-vendor-prefix": true,
 		"no-missing-end-of-source-newline": null,
 		"no-descending-specificity": true,
+		"no-duplicate-at-import-rules": true,
+		"no-empty-first-line": true,
 		"custom-property-empty-line-before": null,
 		"max-nesting-depth": 2,
 		"unit-blacklist": [
@@ -40,6 +52,11 @@
 			"mm",
 			"pc",
 			"dpcm"
-		]
+		],
+		"declaration-property-unit-blacklist": { 
+			"margin": "%"
+		},
+		"number-max-precision": 3,
+		"linebreaks": "unix"
 	}
 }
