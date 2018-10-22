@@ -35,6 +35,7 @@ module.exports = function (neutrino, settings = {}) {
 		return settings.config;
 	});
 	neutrino.register('stylelint', function () {
+		let { fix = false } = neutrino.options.args;
 		let defaultPattern = path.join(
 			path.basename(neutrino.options.source),
 			'**/*.css'
@@ -59,7 +60,8 @@ module.exports = function (neutrino, settings = {}) {
 			files: includePattern.length ? includePattern : defaultPattern,
 			ignoreFiles: excludePattern,
 			disableDefaultIgnores: true,
-			formatter: 'verbose'
+			formatter: 'verbose',
+			fix
 		});
 
 		return stylelint.lint(stylelintSettings)
